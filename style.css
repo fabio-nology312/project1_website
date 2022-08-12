@@ -1,3 +1,15 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(#EA7E6A, #44789F, #2B86C5);
+    font-family: 'Play', sans-serif;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 200;
+    
+}
 .container {
     width: 1024px;
     min-height: 300px;
@@ -7,8 +19,12 @@
 }
 
 header {
-    background-color: rgb(41, 96, 36);
     min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 main {
@@ -19,41 +35,92 @@ align-items: center;
 }
 
 .cards {
-    background-color: rgb(47, 198, 33);
-    min-height: 300px;
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 
 .card1 {
-    background-color: rgb(227, 58, 137);
-    min-height: 300px;
+    background-image: url(https://blog.boot.dev/img/800/HTML-vs-CSS-vs-JavaScript-min.webp);
+    background-size: cover;
+    min-height: 240px;
     width: 30%;
+    
     
 }
 
 .card2 {
-    background-color: rgb(233, 110, 167);
-    min-height: 300px;
+    background-image: url(https://www.techslang.com/wp-content/uploads/2020/07/Canva-Data-cloud-in-the-hand-.-1024x536.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 240px;
     width: 30%;
 }
 
 .card3 {
-    background-color: rgb(235, 164, 197);
-    min-height: 300px;
+    background-image: url(https://www.lucidsystems.co.uk/portal/web/978/content/images/cybersecurity/Cybersecurity.jpg);
+    background-size: cover;
+    min-height: 240px;
     width: 30%;
 
 }
 
+.card1 , .card2, .card3 {
+    padding: 50px;
+    box-sizing: border-box;
+
+}
+
+h1 {
+    font-size: 3.25rem;
+    color: black;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: rgb(252, 129, 177);
+    font-family: 'Play', sans-serif;
+    vertical-align: top;
+    text-align: center;
+
+}
+
+p {
+    font-size: 1.75rem;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 2.5rem;
+
+}
+
 .herobox1 {
-    background-color: cornflowerblue;
+    
+    flex: 2;
+    padding-right: 100px;
+
+}
+
+.cards p {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    text-align: center;
+    margin: 20px 30px;
+
+}
+
+.herobox2 {
+    
     flex: 2;
 
 }
 
-
-.herobox2 {
-    background-color: mintcream;
-    flex: 1;
-
+/* can't get to work i {
+    font-size: 100px;
 }
+ */
+
+.cards a {
+    color: white;
+    text-decoration: none;
+ }
