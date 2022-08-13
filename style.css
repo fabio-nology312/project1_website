@@ -10,6 +10,12 @@ body {
     font-weight: 200;
     
 }
+
+a{
+    color: white;
+    text-decoration: none; 
+
+}
 .container {
     width: 1024px;
     min-height: 300px;
@@ -66,8 +72,9 @@ align-items: center;
 }
 
 .card1 , .card2, .card3 {
-    padding: 50px;
+    padding: 30px 30px 20px 30px;
     box-sizing: border-box;
+    
 
 }
 
@@ -105,7 +112,7 @@ p {
     font-size: 0.85rem;
     line-height: 1.2rem;
     text-align: center;
-    margin: 20px 30px;
+    margin-top: 10px;
 
 }
 
@@ -123,4 +130,12 @@ p {
 .cards a {
     color: white;
     text-decoration: none;
+ }
+
+ .mybutton {
+    background-color: white;
+    color: #EA7E6A;
+    font-family: 'Play', sans-serif; 
+    padding: 11px 25px;
+
  }
