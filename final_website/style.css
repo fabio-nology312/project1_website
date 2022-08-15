@@ -122,10 +122,9 @@ p {
 
 }
 
-/* can't get to work i {
+.cards i {
     font-size: 100px;
 }
- */
 
 .cards a {
     color: white;
