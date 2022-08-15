@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table Tennis Fabio</title>
+
+<!-- geting count of viewers-->>
+<script language="JavaScript">
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0) break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = (argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+function DeleteCookie (name) {
+var exp = new Date();
+exp.setTime (exp.getTime() - 1);
+var cval = GetCookie (name);
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+}
+var expDays = 7;
+var exp = new Date();
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+function amt(){
+var count = GetCookie('count')
+if(count == null) {
+SetCookie('count','1')
+return 1
+}
+else {
+var newcount = parseInt(count) + 1;
+DeleteCookie('count')
+SetCookie('count',newcount,exp)
+return count
+   }
+}
+function getCookieVal(offset) {
+var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+</script>
+</head>
+<!-- tabs style-->>
+<style>
+a:link, a:visited {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: navy;
+  border: none;
+  color: #ffffff;
+  text-align: right;
+  text-decoration:none;
+  font-size: 25px;
+  padding: 15px 25px;
+  width: auto;
+  cursor: pointer;
+  margin: 5px;
+  font-family: courier;
+  Position:absolute;
+  left: 75px;
+}
+
+a:hover, a:active {
+    background-color:blue;
+}
+
+.inner_block {
+    display: inline-block;
+    float: left;
+    width: 40%;
+    Padding:25px;
+    Margin:25px; 
+}
+
+.inner_block img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.dropbtn {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: navy;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  text-decoration:none;
+  font-size: 21px;
+  padding:  20px 25px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: courier;
+}
+
+.dropbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.dropbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.dropbtn:hover span {
+  padding-right: 25px;
+}
+
+.dropbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+  Background color: blue;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: navy;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+	text-align: left;
+	font-family: futura;
+	font-size: 18px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+background-color: blue
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+background-color: blue;
+}
+
+.header{
+Background-color:navy;
+border-radius: 10px;
+}
+
+#clock{
+   font-size:18px;
+	font-family:futura;
+   color:white;
+   text-shadow:2px 2px 2px blue;
+	text-align:center;
+border-radius: 10px;
+   background-color:blue; 
+   width:135px; 
+   height:auto;
+}
+
+	#tfnewsearch{
+		float:left;
+	}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: futura;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 3px 10px 3px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 410%;
+}
+
+.ct{
+Background-color:white;
+Width:96%; 
+Padding: 50px 20px;
+border-radius: 10px;
+Text-align:justify;
+}
+</style>
+<!-- top pic-->>
+<table  style= "margin-left:auto;margin-right:auto;"  background="both.JPG" width="50%"  >
+
+ 
+<td width="30" height="430"><font face="Copperplate" color="red" size="6">Fabio <br></font>
+
+<font face="copperplate" size="6" color="blue" align="justify">Leandro</font><br>
+
+<font face="courier" color="Magenta"  size="6"> Nascimento </font><td>
+
+
+<a href="https://SoupyPricklyRuntimeenvironment.21005890fabio.repl.co">Back to Main</a>
+
+</table>
+
+
+<body>
